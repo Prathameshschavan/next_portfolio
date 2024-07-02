@@ -1,16 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
+import Head from "next/head"
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import Navbar from "@/components/Navbar";
 import Landing from "./landing";
-import Service from "./service";
-import Projects from "./projects";
-import Exp_Edu from "./exp_edu";
-import Skills from "./skills";
-import Contact from "./contact";
+
 import Layout from "@/components/Layout";
-import { Box, IconButton } from "@mui/material";
+import { Box } from "@mui/material";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,19 +27,7 @@ export default function Home() {
           <Skills />
           <Contact /> */}
         </Layout>
-        {/* <IconButton
-          style={{
-            position: "fixed",
-            right: "20px",
-            bottom: "20px",
-            height: "60px",
-            width: "50px",
-          }}
-          className="outlined-btn"
-        >
-
-          <ArrowUpwardIcon />
-        </IconButton> */}
+ 
 
         <Box sx={{
             position: "fixed",
