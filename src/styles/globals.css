@@ -103,7 +103,7 @@
   align-items: center;
   gap: 5%;
   justify-content: space-between;
-  padding: 30px;
+  padding: 20px;
   cursor: pointer;
   transition: ease-in 0.1s;
   border-bottom: 1px solid #ccc;
@@ -125,6 +125,7 @@
 .service-info {
   transition: ease-in 0.1s;
   font-size: 14px;
+  width: 100%;
 }
 .service-container:hover {
   background-image: linear-gradient(to right, #7947df, #2a1454);
@@ -193,6 +194,7 @@
   padding: 0.25rem;
   border-radius: 50px;
   background-color: #f5f3f1;
+  
 }
 
 .tabs * {
@@ -212,7 +214,7 @@ input[type="radio"]:checked + label {
   justify-content: center;
   align-items: center;
   height: 44px;
-  width: 200px;
+  width: 95px;
   font-size: 1.25rem;
   font-weight: 200;
   border-radius: 50px;
@@ -380,15 +382,84 @@ textarea {
   color: #7947df;
 }
 
-/* Mobile devices */
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 0px) and (max-width: 320px) {
   .tilt-img {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     margin-top: 40px;
   }
   .social-media-container {
     margin-top: 10px;
+  }
+
+  .service-container {
+    display: block;
+  }
+
+  .small-device-service-container {
+    display: block;
+  }
+
+  .big-device-service-container {
+    display: none;
+  }
+
+  .project-card{
+    height: 200px;
+    width: 200px;
+  }
+
+  .tabs{
+    width: 100% !important;
+  }
+  .tab {
+    font-size: 0.8rem;
+  }
+
+  .glider{
+    width: 95px;
+  }
+}
+
+/* Mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+  .tilt-img {
+    width: 350px;
+    height: 350px;
+    margin-top: 40px;
+  }
+  .social-media-container {
+    margin-top: 10px;
+  }
+
+  .service-container {
+    display: block;
+  }
+
+  .small-device-service-container {
+    display: block;
+  }
+
+  .big-device-service-container {
+    display: none;
+  }
+
+  
+  .project-card{
+    height: 200px;
+    width: 200px;
+  }
+
+  .tabs{
+    width: 100% !important;
+  }
+
+  .tab {
+    font-size: 0.8rem;
+  }
+
+  .glider{
+    width: 95px;
   }
 }
 
@@ -402,6 +473,24 @@ textarea {
   .social-media-container {
     margin-top: 10px;
   }
+  .service-container {
+    display: block;
+  }
+  .small-device-service-container {
+    display: block;
+  }
+
+  .big-device-service-container {
+    display: none;
+  }
+
+  .tabs{
+    width: 100% !important;
+  }
+
+  .tab {
+    font-size: 1rem;
+  }
 }
 
 /* small screens and laptops */
@@ -414,6 +503,23 @@ textarea {
   .social-media-container {
     margin-top: 10px;
   }
+  .service-container {
+    display: block;
+  }
+  .small-device-service-container {
+    display: block;
+  }
+
+  .big-device-service-container {
+    display: none !important;
+  }
+  .tabs{
+    width: 100% !important;
+  }
+
+  .tab {
+    font-size: 1rem;
+  }
 }
 
 /* Desktops and large screens */
@@ -423,6 +529,20 @@ textarea {
     height: 450px;
     margin-top: 40px;
   }
+  .service-container {
+    display: flex !important;
+  }
+  .small-device-service-container {
+    display: none !important;
+  }
+
+  .big-device-service-container {
+    display: block;
+  }
+
+  .tab {
+    font-size: 1.25rem;
+  }
 }
 
 /* Extra large screens and TVs  */
@@ -431,5 +551,17 @@ textarea {
     width: 450px;
     height: 450px;
     margin-top: 40px;
+  }
+  .service-container {
+    display: flex !important;
+  }
+  .small-device-service-container {
+    display: none !important;
+  }
+  .big-device-service-container {
+    display: block;
+  }
+  .tab {
+    font-size: 1.25rem;
   }
 }

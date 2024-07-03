@@ -14,18 +14,18 @@ const Projects = () => {
       flexDirection={"column"}
       p={"4% 0"}
     >
-      <Box minWidth={"1200px"} maxWidth={"1000px"}>
-        <Box textAlign={"center"} margin={"auto"} width={"45%"} mb={"30px"}>
+      <Box className="global_width">
+        <Box textAlign={"center"} margin={"auto"}  mb={"30px"}>
           <Typography className="gradient-font heading" variant="h5">
             My Recent Works
           </Typography>
           <Typography fontSize={"14px"}>
-            We put your ideas and thus your wishes in the form of a unique web
-            project that inspires you and you customers.
+          We put your ideas and thus your wishes in the form of a unique web
+          project <br /> that inspires you and you customers.
           </Typography>
         </Box>
       </Box>
-      <div className="container">
+      <div  className="container global_width ">
         <div className="tabs">
           <input
             type="radio"
@@ -75,8 +75,7 @@ const Projects = () => {
         </div>
       </div>
       <Box
-        minWidth={"1200px"}
-        maxWidth={"1000px"}
+        className="global_width"
         mt={"50px"}
         display={"flex"}
         justifyContent={"center"}
@@ -84,7 +83,7 @@ const Projects = () => {
       >
         <Grid spacing={5} container>
           {[1, 2, 3, 4].map((item, i) => (
-            <Grid key={item} item md={6} sm={12}>
+            <Grid key={item} item lg={6} md={6} sm={12} xs={12}>
               <ProjectCard fade={i % 2 == 0 ? "fade-right" : "fade-left"} />
             </Grid>
           ))}

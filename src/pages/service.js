@@ -13,42 +13,63 @@ const Service = () => {
       p={"4% 0"}
       bgcolor={"#f6f3fc"}
     >
-      <Box minWidth={"1200px"} maxWidth={"1000px"}>
-        <Box textAlign={"center"} margin={"auto"} width={"45%"} mb={"30px"}>
+      <Box className="global_width">
+        <Box textAlign={"center"} margin={"auto"} mb={"30px"}>
           <Typography className="gradient-font heading" variant="h5">
             {" "}
             My Quality Services
           </Typography>
           <Typography fontSize={"14px"}>
             We put your ideas and thus your wishes in the form of a unique web
-            project that inspires you and you customers.
+            project <br /> that inspires you and you customers.
           </Typography>
         </Box>
 
         <Box>
           {[0, 0, 0, 0].map((item, key) => (
-            <Box
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              key={key}
-              className="service-container"
-            >
-              <Box display={"flex"} alignItems={"center"} gap={"10px"}>
-                <Typography className="service-header" variant="h6">
-                  01
-                </Typography>
-                <Typography className="service-header" fontSize={"25px"}>
-                  Brand Designing
-                </Typography>
+            <Box data-aos="fade-up" data-aos-duration="2000" key={key}>
+              <Box className="service-container big-device-service-container">
+                <Box display={"flex"} alignItems={"center"} gap={"10px"}>
+                  <Typography className="service-header" variant="h6">
+                    01
+                  </Typography>
+                  <Typography className="service-header" fontSize={"25px"}>
+                    Brand Designing
+                  </Typography>
+                </Box>
+                <Box>
+                  <Typography className="service-info">
+                    I break down complex user experinece problems to create
+                    integritiy focussed solutions that connect billions of
+                    people
+                  </Typography>
+                </Box>
+                <Box>
+                  <EastIcon className="service-arrow" />
+                </Box>
               </Box>
-              <Box width={"40%"}>
-                <Typography className="service-info">
-                  I break down complex user experinece problems to create
-                  integritiy focussed solutions that connect billions of people
-                </Typography>
-              </Box>
-              <Box>
-                <EastIcon className="service-arrow" />
+
+              <Box className="service-container  small-device-service-container">
+                <Box display={"flex"} alignItems={"center"} mb={"10px"}  justifyContent={"space-between"}>
+                  <Box display={"flex"} alignItems={"center"} gap={"10px"}>
+                    <Typography className="service-header" variant="h6">
+                      01
+                    </Typography>
+                    <Typography className="service-header" fontSize={"25px"}>
+                      Brand Designing
+                    </Typography>
+                  </Box>
+                  <Box>
+                    <EastIcon className="service-arrow" />
+                  </Box>
+                </Box>
+                <Box>
+                  <Typography className="service-info">
+                    I break down complex user experinece problems to create
+                    integritiy focussed solutions that connect billions of
+                    people
+                  </Typography>
+                </Box>
               </Box>
             </Box>
           ))}

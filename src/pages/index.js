@@ -6,6 +6,8 @@ import Layout from "@/components/Layout";
 import { Box } from "@mui/material";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import Script from 'next/script';
+import Service from "./service";
+import Projects from "./projects";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +23,9 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <Layout>
           <Landing />
-          {/* <Service />
+          <Service />
           <Projects />
-          <Exp_Edu />
+          {/* <Exp_Edu />
           <Skills />
           <Contact /> */}
         </Layout>
