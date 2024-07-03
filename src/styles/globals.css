@@ -194,7 +194,6 @@
   padding: 0.25rem;
   border-radius: 50px;
   background-color: #f5f3f1;
-  
 }
 
 .tabs * {
@@ -281,6 +280,7 @@ input[id="tabs-4"]:checked ~ .glider {
   align-items: end;
   justify-content: center;
   padding: 3%;
+  margin: 3%;
 }
 
 .project-card:hover {
@@ -404,19 +404,19 @@ textarea {
     display: none;
   }
 
-  .project-card{
+  .project-card {
     height: 200px;
     width: 200px;
   }
 
-  .tabs{
+  .tabs {
     width: 100% !important;
   }
   .tab {
     font-size: 0.8rem;
   }
 
-  .glider{
+  .glider {
     width: 95px;
   }
 }
@@ -444,13 +444,7 @@ textarea {
     display: none;
   }
 
-  
-  .project-card{
-    height: 200px;
-    width: 200px;
-  }
-
-  .tabs{
+  .tabs {
     width: 100% !important;
   }
 
@@ -458,8 +452,12 @@ textarea {
     font-size: 0.8rem;
   }
 
-  .glider{
+  .glider {
     width: 95px;
+  }
+  .project-card {
+    width: 360px;
+    height: 360px;
   }
 }
 
@@ -484,12 +482,17 @@ textarea {
     display: none;
   }
 
-  .tabs{
-    width: 100% !important;
+  .tab {
+    width: 115px;
+    font-size: 1rem;
+  }
+  .glider {
+    width: 115px;
   }
 
-  .tab {
-    font-size: 1rem;
+  .project-card {
+    width: 400px;
+    height: 400px;
   }
 }
 
@@ -513,12 +516,23 @@ textarea {
   .big-device-service-container {
     display: none !important;
   }
-  .tabs{
-    width: 100% !important;
-  }
 
   .tab {
+    width: 170px;
     font-size: 1rem;
+  }
+  .glider {
+    width: 170px;
+  }
+
+  .project-card {
+    width: 370px;
+    height: 370px;
+  }
+
+  .project-card {
+    width: 380px;
+    height: 380px;
   }
 }
 
@@ -539,9 +553,18 @@ textarea {
   .big-device-service-container {
     display: block;
   }
-
+  
   .tab {
-    font-size: 1.25rem;
+    width: 170px;
+    font-size: 1rem;
+  }
+  .glider {
+    width: 170px;
+  }
+
+  .project-card {
+    width: 450px;
+    height: 450px;
   }
 }
 
@@ -561,7 +584,16 @@ textarea {
   .big-device-service-container {
     display: block;
   }
+  
   .tab {
-    font-size: 1.25rem;
+    width: 170px;
+    font-size: 1rem;
+  }
+  .glider {
+    width: 170px;
+  }
+  .project-card {
+    width: 500px;
+    height:500px;
   }
 }

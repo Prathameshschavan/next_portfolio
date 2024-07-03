@@ -81,9 +81,9 @@ const Projects = () => {
         justifyContent={"center"}
         alignItems={"center"}
       >
-        <Grid spacing={5} container>
+        <Grid container>
           {[1, 2, 3, 4].map((item, i) => (
-            <Grid key={item} item lg={6} md={6} sm={12} xs={12}>
+            <Grid  sx={{display:"flex", justifyContent:"center", alignItems:"center"}} key={item} item lg={6} md={6} sm={6} xs={12}>
               <ProjectCard fade={i % 2 == 0 ? "fade-right" : "fade-left"} />
             </Grid>
           ))}

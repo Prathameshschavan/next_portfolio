@@ -8,6 +8,7 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import Script from 'next/script';
 import Service from "./service";
 import Projects from "./projects";
+import Exp_Edu from "./exp_edu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,8 +26,8 @@ export default function Home() {
           <Landing />
           <Service />
           <Projects />
-          {/* <Exp_Edu />
-          <Skills />
+          {/* <Exp_Edu /> */}
+          {/* <Skills />
           <Contact /> */}
         </Layout>
 

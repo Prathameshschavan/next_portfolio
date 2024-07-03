@@ -7,10 +7,10 @@ const ProjectCard = ({ fade }) => {
     <Box className="project-card" data-aos={fade} data-aos-duration="2000">
       <Box className="project-card-open-section">
         <Box>
-          <Typography color={"#fff"} fontSize={"30px"} fontWeight={"bold"}>
+          <Typography color={"#fff"} fontSize={["20px", "25px" , "25px" , "30px"]} fontWeight={"bold"}>
             My Recent Works
           </Typography>
-          <Typography color={"#fff"} variant="p">
+          <Typography color={"#fff" } fontSize={["15px", "15px" , "15px" , "20px"]} variant="p">
             My Recent Works
           </Typography>
         </Box>
