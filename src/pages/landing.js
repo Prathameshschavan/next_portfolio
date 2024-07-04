@@ -13,11 +13,7 @@ const Landing = () => (
     justifyContent={"center"}
     mt={["100px", "100px", "190px", "190px"]}
   >
-    <Box
-      // minWidth={["250px", "800px", "1000px", "1200px"]}
-      // maxWidth={["1000px"]}
-      className="global_width"
-    >
+    <Box className="global_width">
       <Box>
         <Grid container>
           <Grid item xs={12} md={12} lg={6}>
@@ -72,11 +68,10 @@ const Landing = () => (
               justifyContent={"center"}
               alignItems={"center"}
             >
-              <Grid container >
+              <Grid container>
                 <Grid
                   display={"flex"}
                   justifyContent={"center"}
-               
                   item
                   xs={12}
                   md={6}
@@ -90,12 +85,7 @@ const Landing = () => (
                     Download CV
                   </Button>
                 </Grid>
-                <Grid
-                  className="social-media-container"
-                  item
-                  xs={12}
-                  md={6}
-                >
+                <Grid className="social-media-container" item xs={12} md={6}>
                   <IconButton className="outlined-icon-btn">
                     <TwitterIcon />
                   </IconButton>
@@ -121,22 +111,24 @@ const Landing = () => (
         container
         spacing={"50px"}
       >
-        {[0,0,0,0].map((item, key)=><Grid key={key} item xs={12} md={6} lg={3}>
-          <Box
-            display={"flex"}
-            gap={"15px"}
-            // width={"200px"}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            <Typography fontWeight={"bold"} fontSize={"70px"}>
-              14+
-            </Typography>
-            <Typography fontSize={"18px"} variant="p">
-              Years of <br/> Experience
-            </Typography>
-          </Box>
-        </Grid>)}
+        {[0, 0, 0, 0].map((item, key) => (
+          <Grid key={key} item xs={12} md={6} lg={3}>
+            <Box
+              display={"flex"}
+              gap={"15px"}
+              // width={"200px"}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
+              <Typography fontWeight={"bold"} fontSize={"70px"}>
+                14+
+              </Typography>
+              <Typography fontSize={"18px"} variant="p">
+                Years of <br /> Experience
+              </Typography>
+            </Box>
+          </Grid>
+        ))}
 
         {/* <Grid  item xs={12} md={6} lg={3}>
           <Box

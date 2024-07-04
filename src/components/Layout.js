@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <Box sx={{ position: "relative" }}>
       <Navbar />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </Box>
   );
 };

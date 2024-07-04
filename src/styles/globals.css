@@ -55,6 +55,23 @@
   padding: 35px;
 }
 
+.outlined-icon-btn-footer{
+  height: 20px;
+  border: 1px solid #fff;
+  width: 20px;
+  border-radius: 50%;
+  transition: 0.3s;
+  color: #fff;
+  padding: 20px;
+}
+
+.outlined-icon-btn-footer:hover {
+  background-color: #FFF;
+  color: #7947df;
+  border: 1px solid #ffff;
+  border-radius: 50%;
+}
+
 .outlined-icon-btn:hover {
   background-color: #7947df;
   color: #fff;
@@ -62,6 +79,13 @@
   border-radius: 50%;
 }
 .social-media-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* padding: 10px; */
+}
+
+.social-media-container-footer{
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -419,6 +443,11 @@ textarea {
   .glider {
     width: 95px;
   }
+
+  .skill-card {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /* Mobile devices */
@@ -459,6 +488,11 @@ textarea {
     width: 360px;
     height: 360px;
   }
+
+  .skill-card {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /* iPads and tablets */
@@ -494,6 +528,12 @@ textarea {
     width: 400px;
     height: 400px;
   }
+ 
+  .skill-card {
+    width: 180px;
+    height: 180px;
+  }
+
 }
 
 /* small screens and laptops */

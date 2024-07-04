@@ -23,15 +23,16 @@ const Contact = () => {
       p={"4% 0"}
       bgcolor={"#f6f3fc"}
     >
-      <Box minWidth={"1200px"} maxWidth={"1000px"}>
+      <Box className="global_width">
         <Grid container>
-          <Grid item md={6} sm={12}>
+          <Grid item lg={6} md={12} sm={12}>
             <Box
               data-aos="fade-right"
               data-aos-duration="2000"
               padding={"40px"}
               borderRadius={"20px"}
               bgcolor={"#fff"}
+              mb="30px"
             >
               <Box mb={"20px"}>
                 <Typography className="gradient-font heading" variant="h5">
@@ -44,19 +45,19 @@ const Contact = () => {
               </Box>
               <form>
                 <Grid container spacing={2}>
-                  <Grid item sm={6}>
+                  <Grid item sm={6} xs={6}>
                     <TextField fullWidth placeholder="First name" />
                   </Grid>
-                  <Grid item sm={6}>
+                  <Grid item sm={6} xs={6}>
                     <TextField fullWidth placeholder="Last name" />
                   </Grid>
-                  <Grid item sm={6}>
+                  <Grid item sm={6} xs={6}>
                     <TextField fullWidth placeholder="Email address" />
                   </Grid>
-                  <Grid item sm={6}>
+                  <Grid item sm={6} xs={6}>
                     <TextField fullWidth placeholder="Phone number" />
                   </Grid>
-                  <Grid item sm={12}>
+                  <Grid item xs={12}>
                     <TextField
                       fullWidth
                       multiline
@@ -81,25 +82,26 @@ const Contact = () => {
             </Box>
           </Grid>
 
-          <Grid item md={6} sm={12}>
+          <Grid width={"100%"} item lg={6} md={12} sm={12}>
             <Box
               width={"100%"}
               height={"100%"}
               display={"flex"}
-              alignItems={"start"}
-              justifyContent={"center"}
-              flexDirection={"column"}
+              alignItems={["start", "start", "center", "start"]}
+              justifyContent={["center", "center", "space-between", "center"]}
+              flexDirection={["column", "column", "row", "column"]}
               gap={"20px"}
-              paddingLeft={"25%"}
+              
              
             >
               <Box
                 display={"flex"}
                 alignItems={"center"}
-                justifyContent={"center"}
+                justifyContent={"left"}
                 gap={"10px"}
                 data-aos="fade-left"
                 data-aos-duration="2000"
+                ml={[0, 0, 0, "25%"]}
               >
                 <Box>
                   <IconButton
@@ -115,10 +117,16 @@ const Contact = () => {
                 </Box>
                 <Box>
                   <Box sx={{ marginLeft: "10px" }}>
-                    <Typography variant="p" fontSize={"18px"}>
+                    <Typography
+                      variant="p"
+                      fontSize={["15px", "15px", "15px", "18px"]}
+                    >
                       Phone
                     </Typography>
-                    <Typography variant="h6" fontSize={"22px"}>
+                    <Typography
+                      variant="h6"
+                      fontSize={["18px", "18px", "18px", "22px"]}
+                    >
                       +91 9860204367
                     </Typography>
                   </Box>
@@ -132,6 +140,7 @@ const Contact = () => {
                 gap={"10px"}
                 data-aos="fade-left"
                 data-aos-duration="2000"
+                ml={[0, 0, 0, "25%"]}
               >
                 <Box>
                   <IconButton
@@ -147,10 +156,16 @@ const Contact = () => {
                 </Box>
                 <Box>
                   <Box sx={{ marginLeft: "10px" }}>
-                    <Typography variant="p" fontSize={"18px"}>
+                    <Typography
+                      variant="p"
+                      fontSize={["15px", "15px", "15px", "18px"]}
+                    >
                       Email
                     </Typography>
-                    <Typography variant="h6" fontSize={"22px"}>
+                    <Typography
+                      variant="h6"
+                      fontSize={["18px", "18px", "18px", "22px"]}
+                    >
                       cprathamesh94@gmail.com
                     </Typography>
                   </Box>
@@ -164,6 +179,7 @@ const Contact = () => {
                 gap={"10px"}
                 data-aos="fade-left"
                 data-aos-duration="2000"
+                ml={[0, 0, 0, "25%"]}
               >
                 <Box>
                   <IconButton
@@ -179,10 +195,16 @@ const Contact = () => {
                 </Box>
                 <Box>
                   <Box sx={{ marginLeft: "10px" }}>
-                    <Typography variant="p" fontSize={"18px"}>
+                    <Typography
+                      variant="p"
+                      fontSize={["15px", "15px", "15px", "18px"]}
+                    >
                       Address
                     </Typography>
-                    <Typography variant="h6" fontSize={"22px"}>
+                    <Typography
+                      variant="h6"
+                      fontSize={["18px", "18px", "18px", "22px"]}
+                    >
                       Virar, Mumbai, India
                     </Typography>
                   </Box>

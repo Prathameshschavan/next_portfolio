@@ -81,10 +81,10 @@ const Skills = () => {
       justifyContent={"center"}
       alignItems={"center"}
       flexDirection={"column"}
-      p={"4% 0"}
+      m={"4% 0"}
     >
-      <Box minWidth={"1200px"} maxWidth={"1000px"}>
-        <Box textAlign={"center"} margin={"auto"} width={"45%"} mb={"30px"}>
+      <Box  className="global_width">
+        <Box textAlign={"center"} margin={"auto"}  mb={"30px"}>
           <Typography className="gradient-font heading" variant="h5">
             My Skills
           </Typography>
@@ -95,7 +95,7 @@ const Skills = () => {
         </Box>
         <Grid container>
           {data.map((item, i) => (
-            <Grid item md={2} key={i}>
+            <Grid display={"flex"} justifyContent={"center"} item lg={2} md={3} sm={4} xs={6} key={i}>
               <Tooltip arrow placement="top" title={item.title}>
                 <Box
                   // data-aos={i % 2 == 0 ? "fade-up-right" : "fade-up-left"}

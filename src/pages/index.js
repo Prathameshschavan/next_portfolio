@@ -9,6 +9,8 @@ import Script from 'next/script';
 import Service from "./service";
 import Projects from "./projects";
 import Exp_Edu from "./exp_edu";
+import Skills from "./skills";
+import Contact from "./contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,9 +28,9 @@ export default function Home() {
           <Landing />
           <Service />
           <Projects />
-          {/* <Exp_Edu /> */}
-          {/* <Skills />
-          <Contact /> */}
+          <Exp_Edu />
+          <Skills />
+          <Contact />
         </Layout>
 
         <Box sx={{
