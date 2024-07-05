@@ -7,7 +7,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 const Footer = () => {
   return (
-    <Box sx={{ bgcolor: "#2a1454", padding:"20px" }}>
+    <Box sx={{ bgcolor: "#2a1454", display:"flex", gap:"20px", flexDirection:"column", padding:"20px"}}>
       <Box className="social-media-container-footer" item xs={12} md={6}>
         <IconButton className="outlined-icon-btn-footer">
           <TwitterIcon />
@@ -19,8 +19,8 @@ const Footer = () => {
           <GitHubIcon />
         </IconButton>
       </Box>
-      <Box display={"flex"} m={"20px"} justifyContent={"center"} color={"#fff"} alignItems={"center"}>
-        <Typography><FavoriteIcon sx={{color:"red", mb:"-7px"}}/> made with love by Prathamesh Chavan</Typography>
+      <Box display={"flex"} justifyContent={"center"} color={"#fff"} alignItems={"center"}>
+        <Typography><FavoriteIcon sx={{color:"red", mb:"-7px"}}/> Made with love by Prathamesh Chavan</Typography>
       </Box>
     </Box>
   );

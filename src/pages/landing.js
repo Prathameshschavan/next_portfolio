@@ -38,7 +38,7 @@ const Landing = () => (
                 variant="h5"
                 className="gradient-font"
               >
-                Full Stack <br /> Web Developer
+                Full Stack Web Developer
               </Typography>
               <Typography
                 mt={"10px"}

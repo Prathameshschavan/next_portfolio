@@ -3,6 +3,7 @@ import { Box, Button, Drawer, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import BrandLogo from "./icons/brand_logo.png"
 const Navbar = () => {
   const [showBackground, setShowBackground] = useState(false);
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -27,7 +28,7 @@ const Navbar = () => {
       alignItems={"center"}
       justifyContent={"center"}
       top={0}
-      p={"10px 0"}
+      // p={"10px 0"}
       zIndex={100}
       width={"100%"}
       boxShadow={"rgba(0, 0, 0, 0.05) 0px 0px 0px 1px"}
@@ -43,11 +44,11 @@ const Navbar = () => {
           <img
             style={{
               borderRadius: "50px",
-              width: "50px",
-              height: "50px",
+              width: "80px",
+              height: "80px",
               objectFit: "cover",
             }}
-            src="https://a.storyblok.com/f/191576/1200x800/215e59568f/round_profil_picture_after_.webp"
+            src={BrandLogo.src}
             alt="logo"
           />
           <Typography variant="p" color={"#7947df"} fontSize={"14px"}>
