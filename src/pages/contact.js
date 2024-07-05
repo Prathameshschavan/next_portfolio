@@ -57,8 +57,9 @@ const Contact = () => {
                   <Grid item sm={6} xs={6}>
                     <TextField fullWidth placeholder="Phone number" />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid  item xs={12}>
                     <TextField
+                      
                       fullWidth
                       multiline
                       rows={8}
