@@ -5,7 +5,7 @@ import Landing from "./landing";
 import Layout from "@/components/Layout";
 import { Box } from "@mui/material";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import Script from 'next/script';
+import Script from "next/script";
 import Service from "./service";
 import Projects from "./projects";
 import Exp_Edu from "./exp_edu";
@@ -33,26 +33,22 @@ export default function Home() {
           <Contact />
         </Layout>
 
-        <Box sx={{
-            position: "fixed",
-            right: "20px",
-            bottom: "20px",
-            height: "40px",
-            width: "40px",
-            border:"3px solid #8750f7",
-            display:"flex",
-            justifyContent:"center",
-            alignItems:"center",
-            borderRadius:"50%",
-            cursor:"pointer",
-            color:"#8750f7"
-          }}>
+        <Box
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className={"scroll-up-btn"}
+        >
           <ArrowUpwardIcon />
         </Box>
-        
-        <Script src="https://unpkg.com/aos@next/dist/aos.js" strategy="afterInteractive" onLoad={() => {
+
+        <Script
+          src="https://unpkg.com/aos@next/dist/aos.js"
+          strategy="afterInteractive"
+          onLoad={() => {
             AOS.init();
-        }} />
+          }}
+        />
       </main>
     </>
   );

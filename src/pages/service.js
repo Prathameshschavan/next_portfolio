@@ -9,7 +9,7 @@ const Service = () => {
       display={"flex"}
       justifyContent={"center"}
       alignItems={"center"}
-      mt={"45px"}
+
       p={"4% 0"}
       bgcolor={"#f6f3fc"}
     >
