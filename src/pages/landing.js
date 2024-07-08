@@ -116,13 +116,13 @@ const Landing = () => (
                         xs={6}
                         md={6}
                       >
-                        <IconButton className="outlined-icon-btn">
+                        <IconButton target="_blank" href="https://x.com/Prathamesh_2117" className="outlined-icon-btn">
                           <TwitterIcon sx={{ fontSize: "20px" }} />
                         </IconButton>
-                        <IconButton className="outlined-icon-btn">
+                        <IconButton target="_blank" href="https://www.linkedin.com/in/prathamesh-chavan-5532261b4/" className="outlined-icon-btn">
                           <LinkedInIcon sx={{ fontSize: "20px" }} />
                         </IconButton>
-                        <IconButton className="outlined-icon-btn">
+                        <IconButton target="_blank" href="https://github.com/Prathameshschavan" className="outlined-icon-btn">
                           <GitHubIcon sx={{ fontSize: "20px" }} />
                         </IconButton>
                       </Grid>

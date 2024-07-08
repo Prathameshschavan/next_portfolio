@@ -329,15 +329,18 @@ input[id="tabs-4"]:checked ~ .glider {
 .exp_edu_duration {
   color: #8750f7;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .exp_edu_title {
   color: #2a1454;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .exp_edu_desc {
   font-size: 18px;
+  text-transform: capitalize;
 }
 
 .exp_edu_card:hover {
@@ -405,12 +408,18 @@ textarea {
 .drawer-menu-items > li {
   padding: 15px;
   cursor: pointer;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #ccc;
+  
 }
 
 .drawer-menu-items > li:hover {
   padding: 15px;
-  background-color: #fff;
-  color: #7947df;
+  background-image: linear-gradient(to right, #7947df, #2a1454);
+  color: #fff;
 }
 
 /* ///////////////////////////////////////// MEDIA QUERY STARTS HERE //////////////////////////////////////////// */
@@ -659,6 +668,10 @@ textarea {
   .small-screen-outline-btn-container {
     display: none;
   }
+}
+
+.pointer{
+  cursor: pointer;
 }
 
 .area {

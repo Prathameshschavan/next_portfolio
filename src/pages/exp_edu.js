@@ -4,6 +4,32 @@ import React from "react";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import SchoolIcon from "@mui/icons-material/School";
 const Exp_Edu = () => {
+  const experience = [
+    {
+      year: "Feb 2023 - Present",
+      designation: "MERN stack developer",
+      location: "Noida, Sector 63",
+    },
+    {
+      year: "Jun 2022 - Dec 2022",
+      designation: "Junior Reactjs Developer",
+      location: "Mumbai, Maharashtra",
+    },
+  ];
+
+  const education = [
+    {
+      year: "May 2022 - Mar 2023",
+      course: "Full Stack Web Development",
+      location: "Koramangala 7th Block,Bangalore",
+    },
+    {
+      year: "Jun 2021 - Jul 2023",
+      course: "Bachelor of Computer Applications",
+      location: "Nashik, Maharashtra",
+    },
+  ];
+
   return (
     <Box
       width={"100%"}
@@ -14,7 +40,7 @@ const Exp_Edu = () => {
       p={"4% 0"}
       bgcolor={"#f6f3fc"}
     >
-      <Box  className="global_width">
+      <Box className="global_width">
         <Grid spacing={5} container>
           <Grid width={"100%"} item md={6} sm={12}>
             <Box textAlign={"center"}>
@@ -29,22 +55,22 @@ const Exp_Edu = () => {
                 />
                 My Experience
               </Typography>
-  
-              {[1, 2, 3, 4].map((item) => (
+
+              {experience.map((exp, i) => (
                 <Box
                   data-aos="fade-right"
                   data-aos-duration="2000"
-                  key={item}
+                  key={i}
                   className="exp_edu_card"
                 >
                   <Typography className="exp_edu_duration" variant="h6">
-                    2022 - Present
+                    {exp.year}
                   </Typography>
                   <Typography className="exp_edu_title" variant="h5">
-                    LEAD DEVELOPER
+                    {exp.designation}
                   </Typography>
                   <Typography className="exp_edu_desc" variant="p">
-                    Blockdots, London
+                    {exp.location}
                   </Typography>
                 </Box>
               ))}
@@ -65,21 +91,21 @@ const Exp_Edu = () => {
                 My Education
               </Typography>
 
-              {[1, 2, 3, 4].map((item) => (
+              {education.map((edu, i) => (
                 <Box
                   data-aos="fade-right"
                   data-aos-duration="2000"
-                  key={item}
+                  key={i}
                   className="exp_edu_card"
                 >
                   <Typography className="exp_edu_duration" variant="h6">
-                    2022 - Present
+                    {edu.year}
                   </Typography>
                   <Typography className="exp_edu_title" variant="h5">
-                    LEAD DEVELOPER
+                    {edu.course}
                   </Typography>
                   <Typography className="exp_edu_desc" variant="p">
-                    Blockdots, London
+                    {edu.location}
                   </Typography>
                 </Box>
               ))}

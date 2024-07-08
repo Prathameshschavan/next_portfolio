@@ -87,7 +87,7 @@ const Navbar = () => {
             height: "100%",
             color: "#fff",
           }}
-          className={"gradient-bg"}
+          // className={"gradient-bg"}
         >
           <Box display={"flex"} justifyContent={"right"} m={"10px"}>
             {" "}
@@ -98,10 +98,10 @@ const Navbar = () => {
           </Box>
 
           <ul className="drawer-menu-items">
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li className="gradient-font">Home</li>
+            <li className="gradient-font">About</li>
+            <li className="gradient-font">Projects</li>
+            <li className="gradient-font">Contact</li>
           </ul>
         </Box>
       </Drawer>

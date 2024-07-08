@@ -57,9 +57,8 @@ const Contact = () => {
                   <Grid item sm={6} xs={6}>
                     <TextField fullWidth placeholder="Phone number" />
                   </Grid>
-                  <Grid  item xs={12}>
+                  <Grid item xs={12}>
                     <TextField
-                      
                       fullWidth
                       multiline
                       rows={8}
@@ -92,8 +91,6 @@ const Contact = () => {
               justifyContent={["center", "center", "space-between", "center"]}
               flexDirection={["column", "column", "row", "column"]}
               gap={"20px"}
-              
-             
             >
               <Box
                 display={"flex"}
@@ -106,12 +103,13 @@ const Contact = () => {
               >
                 <Box>
                   <IconButton
-                    className="gradient-bg"
+                    className="gradient-bg pointer"
                     sx={{
                       color: "#fff",
                       width: "60px",
                       height: "60px",
                     }}
+                    href="tel:+919860204367"
                   >
                     <CallIcon />
                   </IconButton>
@@ -125,7 +123,11 @@ const Contact = () => {
                       Phone
                     </Typography>
                     <Typography
+                      onClick={() => {
+                        window.open("tel:+919860204367");
+                      }}
                       variant="h6"
+                      className="pointer"
                       fontSize={["18px", "18px", "18px", "22px"]}
                     >
                       +91 9860204367
@@ -145,12 +147,13 @@ const Contact = () => {
               >
                 <Box>
                   <IconButton
-                    className="gradient-bg"
+                    className="gradient-bg pointer"
                     sx={{
                       color: "#fff",
                       width: "60px",
                       height: "60px",
                     }}
+                    href="mailto:prathameshschavan.work@gmail.com"
                   >
                     <AlternateEmailIcon />
                   </IconButton>
@@ -166,6 +169,10 @@ const Contact = () => {
                     <Typography
                       variant="h6"
                       fontSize={["18px", "18px", "18px", "22px"]}
+                      onClick={() => {
+                        window.open("mailto:prathameshschavan.work@gmail.com");
+                      }}
+                      className="pointer"
                     >
                       cprathamesh94@gmail.com
                     </Typography>
@@ -184,12 +191,14 @@ const Contact = () => {
               >
                 <Box>
                   <IconButton
-                    className="gradient-bg"
+                    className="gradient-bg pointer"
                     sx={{
                       color: "#fff",
                       width: "60px",
                       height: "60px",
                     }}
+                    target="_blank"
+                    href="https://www.google.com/maps/place/Virar,+Maharashtra/@19.462578,72.7637375,13z/data=!3m1!4b1!4m6!3m5!1s0x3be7aa23dce7efbf:0x99bd87871748d8f4!8m2!3d19.4563596!4d72.7924612!16zL20vMDQxYmdr?entry=ttu"
                   >
                     <LocationOnIcon />
                   </IconButton>
@@ -205,6 +214,13 @@ const Contact = () => {
                     <Typography
                       variant="h6"
                       fontSize={["18px", "18px", "18px", "22px"]}
+                      onClick={() => {
+                        window.open(
+                          "https://www.google.com/maps/place/Virar,+Maharashtra/@19.462578,72.7637375,13z/data=!3m1!4b1!4m6!3m5!1s0x3be7aa23dce7efbf:0x99bd87871748d8f4!8m2!3d19.4563596!4d72.7924612!16zL20vMDQxYmdr?entry=ttu",
+                          "_blank"
+                        );
+                      }}
+                      className="pointer"
                     >
                       Virar, Mumbai, India
                     </Typography>
