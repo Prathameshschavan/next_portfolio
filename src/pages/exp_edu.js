@@ -21,7 +21,7 @@ const Exp_Edu = () => {
     {
       year: "May 2022 - Mar 2023",
       course: "Full Stack Web Development",
-      location: "Koramangala 7th Block,Bangalore",
+      location: "Koramangala 7th Block, Bangalore",
     },
     {
       year: "Jun 2021 - Jul 2023",

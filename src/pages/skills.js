@@ -82,6 +82,7 @@ const Skills = () => {
       alignItems={"center"}
       flexDirection={"column"}
       m={"4% 0"}
+      id="skills"
     >
       <Box  className="global_width">
         <Box textAlign={"center"} margin={"auto"}  mb={"30px"}>

@@ -4,6 +4,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import DP from "../components/icons/display_profile.jpg"
 import React from "react";
 
 const Landing = () => {
@@ -13,11 +14,21 @@ const Landing = () => {
     { desc1: "Happy", desc2: "Client", number: 10 },
     { desc1: "Certification", desc2: "Acquired", number: 8 },
   ];
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = "/Prathamesh_Chavan_CV.pdf"; // Path to your CV file in the public directory
+    link.download = 'Prathamesh_Chavan_CV.pdf'; // Desired file name for the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <Box
       width={"100%"}
       height={["100%", "100%", "100%", "100%"]}
       position={"relative"}
+      id="home"
     >
       <Box height={["100%", "100%", "100%", "100%"]} className="area">
         <ul className="circles">
@@ -83,7 +94,7 @@ const Landing = () => {
                       variant="h5"
                       className="gradient-font"
                     >
-                      Full Stack Web Deveper
+                      Full Stack Web Developer
                     </Typography>
                     <Typography
                       mt={"10px"}
@@ -116,6 +127,7 @@ const Landing = () => {
                             className="outlined-btn"
                             variant="outlined"
                             endIcon={<DownloadIcon />}
+                            onClick={handleDownload}
                           >
                             Download CV
                           </Button>
@@ -162,7 +174,7 @@ const Landing = () => {
                   <Box textAlign={"center"}>
                     <img
                       className="tilt-img"
-                      src="https://i.pinimg.com/736x/e9/d5/d5/e9d5d525d1630f1c1c903161e155c7dc.jpg"
+                      src={DP.src}
                       alt="my-pic"
                     />
                   </Box>
@@ -194,26 +206,39 @@ const Landing = () => {
                           className="outlined-btn"
                           variant="outlined"
                           endIcon={<DownloadIcon />}
+                          onClick={handleDownload}
                         >
                           Download CV
                         </Button>
                       </Grid>
                       <Grid
-                        className="social-media-container"
-                        item
-                        xs={12}
-                        md={6}
-                      >
-                        <IconButton className="outlined-icon-btn">
-                          <TwitterIcon sx={{ fontSize: "20px" }} />
-                        </IconButton>
-                        <IconButton className="outlined-icon-btn">
-                          <LinkedInIcon sx={{ fontSize: "20px" }} />
-                        </IconButton>
-                        <IconButton className="outlined-icon-btn">
-                          <GitHubIcon sx={{ fontSize: "20px" }} />
-                        </IconButton>
-                      </Grid>
+                          className="social-media-container"
+                          item
+                          xs={12}
+                          md={6}
+                        >
+                          <IconButton
+                            target="_blank"
+                            href="https://x.com/Prathamesh_2117"
+                            className="outlined-icon-btn"
+                          >
+                            <TwitterIcon sx={{ fontSize: "20px" }} />
+                          </IconButton>
+                          <IconButton
+                            target="_blank"
+                            href="https://www.linkedin.com/in/prathamesh-chavan-5532261b4/"
+                            className="outlined-icon-btn"
+                          >
+                            <LinkedInIcon sx={{ fontSize: "20px" }} />
+                          </IconButton>
+                          <IconButton
+                            target="_blank"
+                            href="https://github.com/Prathameshschavan"
+                            className="outlined-icon-btn"
+                          >
+                            <GitHubIcon sx={{ fontSize: "20px" }} />
+                          </IconButton>
+                        </Grid>
                     </Grid>
                   </Box>
                 </Grid>

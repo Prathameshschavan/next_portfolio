@@ -22,6 +22,7 @@ const Contact = () => {
       mt={"45px"}
       p={"4% 0"}
       bgcolor={"#f6f3fc"}
+      id="contact"
     >
       <Box className="global_width">
         <Grid container>
@@ -174,7 +175,7 @@ const Contact = () => {
                       }}
                       className="pointer"
                     >
-                      cprathamesh94@gmail.com
+                      prathameshschavan.work@gmail.com
                     </Typography>
                   </Box>
                 </Box>

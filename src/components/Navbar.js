@@ -1,26 +1,16 @@
-'use client'
+"use client";
 import { Box, Button, Drawer, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import BrandLogo from "./icons/brand_logo.png"
+import BrandLogo from "./icons/brand_logo.png";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import useCommonService from "@/services/useCommonService";
 const Navbar = () => {
   const [showBackground, setShowBackground] = useState(false);
   const [openDrawer, setOpenDrawer] = useState(false);
-  const TOP_OFFSET = 1000;
-  useEffect(() => {
-    // const handleScroll = () => {
-    //   if (window.scrollY >= TOP_OFFSET) {
-    //     setShowBackground(true);
-    //   } else {
-    //     setShowBackground(false);
-    //   }
-    // };
-    // window.addEventListener("scroll", handleScroll);
-    // return () => {
-    //   window.removeEventListener("scroll", handleScroll);
-    // };
-  }, []);
+  const { handleClickMenu } = useCommonService();
+
   return (
     <Box
       position={"fixed"}
@@ -60,16 +50,40 @@ const Navbar = () => {
           alignItems={"center"}
           gap={"30px"}
         >
-          <Typography variant="p" className="hover-underline-animation">
+          <Typography
+            onClick={(e) => {
+              handleClickMenu("#home");
+            }}
+            variant="p"
+            className="hover-underline-animation"
+          >
             Home
           </Typography>
-          <Typography variant="p" className="hover-underline-animation">
-            About
+          <Typography
+            onClick={(e) => {
+              handleClickMenu("#skills");
+            }}
+            variant="p"
+            className="hover-underline-animation"
+          >
+            Skills
           </Typography>
-          <Typography variant="p" className="hover-underline-animation">
+          <Typography
+            onClick={(e) => {
+              handleClickMenu("#projects");
+            }}
+            variant="p"
+            className="hover-underline-animation"
+          >
             Projects
           </Typography>
-          <Typography variant="p" className="hover-underline-animation">
+          <Typography
+            onClick={(e) => {
+              handleClickMenu("#contact");
+            }}
+            variant="p"
+            className="hover-underline-animation"
+          >
             Contact
           </Typography>
         </Box>
@@ -89,19 +103,89 @@ const Navbar = () => {
           }}
           // className={"gradient-bg"}
         >
-          <Box display={"flex"} justifyContent={"right"} m={"10px"}>
-            {" "}
+          <Box display={"flex"} m={"10px"} justifyContent={"space-between"}>
+            <Box display={"flex"} alignItems={"center"} gap={"10px"}>
+              <img
+                style={{
+                  borderRadius: "50px",
+                  width: "50px",
+                  height: "50px",
+                  objectFit: "cover",
+                }}
+                src={BrandLogo.src}
+                alt="logo"
+              />
+              <Typography variant="p" color={"#7947df"} fontSize={"14px"}>
+                Prathamesh Chavan
+              </Typography>
+            </Box>{" "}
             <CloseIcon
-              sx={{ cursor: "pointer" }}
+              sx={{ cursor: "pointer", color: "black", fontSize: "14px" }}
               onClick={() => setOpenDrawer(false)}
             />
           </Box>
 
           <ul className="drawer-menu-items">
-            <li className="gradient-font">Home</li>
-            <li className="gradient-font">About</li>
-            <li className="gradient-font">Projects</li>
-            <li className="gradient-font">Contact</li>
+            <li
+              onClick={(e) => {
+                handleClickMenu("#home");
+                setOpenDrawer(false);
+              }}
+              className="gradient-font"
+              style={{
+                fontSize: "1rem",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              Home
+              <ArrowForwardIosIcon style={{ fontSize: "1rem" }} />
+            </li>
+            <li
+              onClick={(e) => {
+                handleClickMenu("#skills");
+                setOpenDrawer(false);
+              }}
+              className="gradient-font"
+              style={{
+                fontSize: "1rem",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              Skills
+              <ArrowForwardIosIcon style={{ fontSize: "1rem" }} />
+            </li>
+            <li
+              onClick={(e) => {
+                handleClickMenu("#projects");
+                setOpenDrawer(false);
+              }}
+              className="gradient-font"
+              style={{
+                fontSize: "1rem",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              Projects
+              <ArrowForwardIosIcon style={{ fontSize: "1rem" }} />
+            </li>
+            <li
+              onClick={(e) => {
+                handleClickMenu("#contact");
+                setOpenDrawer(false);
+              }}
+              className="gradient-font"
+              style={{
+                fontSize: "1rem",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              Contact
+              <ArrowForwardIosIcon style={{ fontSize: "1rem" }} />
+            </li>
           </ul>
         </Box>
       </Drawer>
