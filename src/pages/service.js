@@ -36,9 +36,9 @@ const Service = () => {
             {" "}
             My Quality Services
           </Typography>
-          <Typography fontSize={"14px"}>
-            We put your ideas and thus your wishes in the form of a unique web
-            project <br /> that inspires you and you customers.
+          <Typography fontSize={"14px"} px={2}>
+            I transform ideas into unique web experiences that <br /> inspire and
+            engage users.
           </Typography>
         </Box>
 

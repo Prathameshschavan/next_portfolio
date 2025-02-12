@@ -34,7 +34,7 @@
   text-transform: capitalize;
   border-radius: 50px;
   transition: 0.3s;
-  width: 250px;
+  /* width: 250px; */
   padding: 25px 0;
   font-size: 14px;
   height: 10px;
@@ -79,13 +79,7 @@
   border: 1px solid #7947df;
   border-radius: 50%;
 }
-.social-media-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  /* padding: 10px; */
-}
+
 
 .social-media-container-footer {
   display: flex;
@@ -132,31 +126,27 @@
   justify-content: space-between;
   padding: 20px;
   cursor: pointer;
-  transition: ease-in 0.1s;
   border-bottom: 1px solid #ccc;
-  animation: inAnimation 1s;
 }
 
 .service-arrow {
   font-size: 30px;
   transform: rotate(45deg);
-  transition: ease-in 0.1s e;
+  transition: ease-in 0.3s;
 }
 
 .service-header {
   color: #8750f7;
   font-weight: bolder;
   white-space: no-wrap;
-  transition: ease-in 0.1s;
 }
 .service-info {
-  transition: ease-in 0.1s;
   font-size: 14px;
   width: 100%;
 }
 .service-container:hover {
   background-image: linear-gradient(to right, #7947df, #2a1454);
-  color: #fff !important;
+  color: #fff !important; 
   .service-header {
     color: #fff;
   }
@@ -327,6 +317,7 @@ input[id="tabs-4"]:checked ~ .glider {
   background-color: #fff;
   cursor: pointer;
   margin-block: 20px;
+  
 }
 
 .exp_edu_duration {
@@ -463,6 +454,7 @@ textarea {
   .big-screen-outline-btn-container {
     display: none;
   }
+
 }
 
 /* Mobile devices */
@@ -551,13 +543,16 @@ textarea {
   .big-screen-outline-btn-container {
     display: none;
   }
+
+  
+  
 }
 
 /* small screens and laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
   .tilt-img {
-    width: 23rem;
-    height: 23rem;
+    width: 20rem;
+    height: 20rem;
     margin-top: 3rem;
   }
 
@@ -802,4 +797,30 @@ textarea {
 .scroll-up-btn:hover {
   color: #fff;
   background-color: #8750f7;
+}
+
+
+.typewriter h6 {
+  color: #2a1454;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }

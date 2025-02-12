@@ -173,7 +173,8 @@ const Contact = () => {
                       onClick={() => {
                         window.open("mailto:prathameshschavan.work@gmail.com");
                       }}
-                      className="pointer"
+                      sx={{wordBreak: "break-word"}}
+                      className="pointer "
                     >
                       prathameshschavan.work@gmail.com
                     </Typography>

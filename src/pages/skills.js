@@ -84,19 +84,28 @@ const Skills = () => {
       m={"4% 0"}
       id="skills"
     >
-      <Box  className="global_width">
-        <Box textAlign={"center"} margin={"auto"}  mb={"30px"}>
+      <Box className="global_width">
+        <Box textAlign={"center"} margin={"auto"} mb={"30px"}>
           <Typography className="gradient-font heading" variant="h5">
             My Skills
           </Typography>
           <Typography fontSize={"14px"}>
-            We put your ideas and thus your wishes in the form of a unique web
-            project that inspires you and you customers.
+            I transform ideas into unique web experiences that <br /> inspire
+            and engage users.
           </Typography>
         </Box>
         <Grid container>
           {data.map((item, i) => (
-            <Grid display={"flex"} justifyContent={"center"} item lg={2} md={3} sm={4} xs={6} key={i}>
+            <Grid
+              display={"flex"}
+              justifyContent={"center"}
+              item
+              lg={2}
+              md={3}
+              sm={4}
+              xs={6}
+              key={i}
+            >
               <Tooltip arrow placement="top" title={item.title}>
                 <Box
                   // data-aos={i % 2 == 0 ? "fade-up-right" : "fade-up-left"}
