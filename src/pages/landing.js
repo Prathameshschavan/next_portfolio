@@ -86,7 +86,7 @@ const Landing = () => {
                       variant="h6"
                       color={"#2a1454"}
                     >
-                      I am Prathamesh
+                      I am Prathamesh Chavan
                     </Typography>
                     <Typography
                       fontWeight={"bolder"}
