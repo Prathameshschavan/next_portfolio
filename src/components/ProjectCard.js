@@ -7,13 +7,17 @@ const ProjectCard = ({ fade, project }) => {
     <Box
       className="project-card"
       sx={{
-        backgroundImage:
-          `url(${project.image})`,
+        backgroundImage: `url(${project.image})`,
       }}
       data-aos={fade}
       data-aos-duration="2000"
     >
-      <Box className="project-card-open-section">
+      <Box
+        onClick={() => {
+          window.open(project.link, "_blank");
+        }}
+        className="project-card-open-section"
+      >
         <Box>
           <Typography
             color={"#fff"}
@@ -27,18 +31,15 @@ const ProjectCard = ({ fade, project }) => {
             fontSize={["15px", "15px", "15px", "20px"]}
             variant="p"
           >
-           {project.desc}
+            {project.desc}
           </Typography>
         </Box>
-        <Box >
+        <Box>
           <EastIcon
             sx={{
               color: "#fff",
               fontSize: "40px",
               transform: "rotate(-40deg)",
-            }}
-            onClick={()=>{
-              window.open(project.link, "_blank");
             }}
           />
         </Box>
