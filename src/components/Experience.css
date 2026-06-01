@@ -1,0 +1,136 @@
+.experience-section { background: var(--bg); }
+
+.timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary), var(--accent));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 48px;
+  margin-bottom: 36px;
+}
+
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: -7px;
+  top: 28px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+  z-index: 1;
+}
+
+.exp-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 28px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.exp-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.exp-role {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.exp-company {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: var(--text3);
+  font-weight: 500;
+}
+
+.exp-meta-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.exp-type {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+.exp-period {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--text3);
+}
+
+.exp-desc {
+  font-size: 0.9rem;
+  color: var(--text3);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.exp-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exp-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text2);
+}
+
+.exp-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+@media (max-width: 640px) {
+  .exp-header { flex-direction: column; }
+  .exp-meta-right { align-items: flex-start; }
+  .timeline-line { display: none; }
+  .timeline-item { padding-left: 0; }
+  .timeline-dot { display: none; }
+}
