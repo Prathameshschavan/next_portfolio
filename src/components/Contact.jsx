@@ -11,8 +11,8 @@ const info = [
 ];
 
 const socials = [
-  { icon: <FiGithub />, href: 'https://github.com/Prathameshchavan', label: 'GitHub' },
-  { icon: <FiLinkedin />, href: 'https://linkedin.com/in/prathamesh-chavan', label: 'LinkedIn' },
+  { icon: <FiGithub />, href: 'https://github.com/Prathameshschavan', label: 'GitHub' },
+  { icon: <FiLinkedin />, href: 'https://www.linkedin.com/in/prathamesh-chavan-1886202a5/', label: 'LinkedIn' },
 ];
 
 const WA_NUMBER = '919860204367';

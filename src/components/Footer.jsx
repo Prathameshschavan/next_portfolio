@@ -12,8 +12,8 @@ export default function Footer() {
           </Link>
           <p className="footer-tagline">Full Stack Developer · Building the web, one commit at a time.</p>
           <div className="footer-socials">
-            <a href="https://github.com/Prathameshchavan" target="_blank" rel="noreferrer" aria-label="GitHub"><FiGithub /></a>
-            <a href="https://linkedin.com/in/prathamesh-chavan" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FiLinkedin /></a>
+            <a href="https://github.com/Prathameshschavan" target="_blank" rel="noreferrer" aria-label="GitHub"><FiGithub /></a>
+            <a href="https://www.linkedin.com/in/prathamesh-chavan-1886202a5/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FiLinkedin /></a>
           </div>
         </div>
 
