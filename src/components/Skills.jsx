@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import {
-  FiCode, FiServer, FiDatabase, FiTool
+  FiCode, FiServer, FiDatabase, FiTool, FiCpu
 } from 'react-icons/fi';
 import './Skills.css';
 
@@ -17,9 +17,10 @@ const categories = [
       { name: 'Next.js', level: 88 },
       { name: 'TypeScript', level: 80 },
       { name: 'JavaScript (ES6+)', level: 90 },
+      { name: 'Redux Toolkit', level: 85 },
       { name: 'Tailwind CSS', level: 88 },
       { name: 'Material UI', level: 82 },
-      { name: 'HTML / CSS', level: 92 },
+      { name: 'HTML5 / CSS3', level: 92 },
     ],
   },
   {
@@ -29,10 +30,9 @@ const categories = [
     bg: '#fdf2f8',
     skills: [
       { name: 'Node.js', level: 85 },
-      { name: 'Nest.js', level: 78 },
       { name: 'Express.js', level: 83 },
       { name: 'REST APIs', level: 88 },
-      { name: 'Prisma ORM', level: 82 },
+      { name: 'GraphQL', level: 80 },
     ],
   },
   {
@@ -43,6 +43,7 @@ const categories = [
     skills: [
       { name: 'PostgreSQL', level: 82 },
       { name: 'MongoDB', level: 78 },
+      { name: 'Prisma ORM', level: 82 },
     ],
   },
   {
@@ -51,10 +52,23 @@ const categories = [
     color: '#f59e0b',
     bg: '#fffbeb',
     skills: [
-      { name: 'Redux Toolkit', level: 85 },
-      { name: 'Context API', level: 88 },
-      { name: 'Git', level: 88 },
+      { name: 'Git / GitHub', level: 88 },
       { name: 'Figma', level: 75 },
+      { name: 'Builder.io', level: 78 },
+      { name: 'Postman', level: 85 },
+      { name: 'VS Code', level: 92 },
+    ],
+  },
+  {
+    icon: <FiCpu />,
+    title: 'AI Development',
+    color: '#8b5cf6',
+    bg: '#f5f3ff',
+    skills: [
+      { name: 'Claude Code', level: 90 },
+      { name: 'Cursor', level: 85 },
+      { name: 'ChatGPT', level: 88 },
+      { name: 'GitHub Copilot', level: 82 },
     ],
   },
 ];

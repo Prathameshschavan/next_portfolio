@@ -20,6 +20,9 @@
   transform: translateY(-4px);
 }
 
+/* An odd final card stretches across the row instead of leaving a gap */
+.skill-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
 .skill-card-header {
   display: flex;
   align-items: center;

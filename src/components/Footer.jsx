@@ -10,7 +10,7 @@ export default function Footer() {
           <Link to="hero" smooth duration={600} className="footer-logo">
             <span>P</span>rathamesh Chavan
           </Link>
-          <p className="footer-tagline">Full Stack Developer · Building the web, one commit at a time.</p>
+          <p className="footer-tagline">Full Stack Engineer · Building the web, one commit at a time.</p>
           <div className="footer-socials">
             <a href="https://github.com/Prathameshschavan" target="_blank" rel="noreferrer" aria-label="GitHub"><FiGithub /></a>
             <a href="https://www.linkedin.com/in/prathamesh-chavan-1886202a5/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FiLinkedin /></a>
@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="footer-divider" />
 
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Prathamesh Chavan. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Prathamesh Chavan</p>
           <p className="footer-made">Made with <FiHeart className="heart" /> using React</p>
         </div>
       </div>

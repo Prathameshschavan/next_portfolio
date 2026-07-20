@@ -35,10 +35,10 @@ export default function Hero() {
             <br />
             <TypeAnimation
               sequence={[
-                'Full Stack Developer', 2000,
-                'React Developer', 2000,
+                'Full Stack Engineer', 2000,
+                'React & Next.js Developer', 2000,
                 'Node.js Engineer', 2000,
-                'Problem Solver', 2000,
+                'AI-Assisted Developer', 2000,
               ]}
               wrapper="span"
               speed={50}
@@ -49,7 +49,8 @@ export default function Hero() {
 
           <p className="hero-desc">
             Full Stack Engineer with 3+ years of experience building scalable web applications
-            using React.js, Next.js, and Node.js, with a strong focus on clean UI and system reliability.
+            using React.js, Next.js, TypeScript, Node.js, Prisma, and PostgreSQL. I build SaaS
+            products, SEO-focused solutions, and fast, reliable user experiences.
           </p>
 
           <div className="hero-actions">
