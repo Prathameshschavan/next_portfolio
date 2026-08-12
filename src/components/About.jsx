@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiDownload, FiCode, FiAward } from 'react-icons/fi';
+import { FiDownload, FiCode, FiLayers, FiZap } from 'react-icons/fi';
 import './About.css';
 
 const stats = [
-  { icon: <FiCode />, val: '3+', label: 'Years Coding' },
-  { icon: <FiAward />, val: '3+', label: 'Projects Done' },
+  { icon: <FiCode />, val: '3+', label: 'Years Frontend' },
+  { icon: <FiLayers />, val: '13+', label: 'Pages Moved to SSR' },
+  { icon: <FiZap />, val: '~20%', label: 'Faster Page Loads' },
 ];
 
 export default function About() {
@@ -45,21 +46,24 @@ export default function About() {
           <div className="about-content">
             <div className="section-header" style={{ textAlign: 'left', marginBottom: 28 }}>
               <div className="section-tag">About Me</div>
-              <h2 className="section-title">Passionate about building <span>great products</span></h2>
+              <h2 className="section-title">Frontend Engineer building <span>production-grade UIs</span></h2>
             </div>
 
             <p className="about-p">
-              Hey there! I'm <strong>Prathamesh Chavan</strong>, a Full Stack Engineer based in Mumbai, Maharashtra.
-              I build scalable web applications using React.js, Next.js, and Node.js, with a strong focus on clean UI and system reliability.
+              Hey there! I'm <strong>Prathamesh Chavan</strong>, a <strong>Frontend Engineer</strong> based in Mumbai, Maharashtra,
+              with 3+ years of experience building production web applications in <strong>React.js</strong>, <strong>Next.js</strong>,
+              and <strong>TypeScript</strong>.
             </p>
             <p className="about-p">
-              I built and launched <strong>MaintainEase</strong>, a SaaS platform for housing society accounting,
-              handling end-to-end development including billing workflows and data integrity.
-              I also integrate AI-driven features to automate processes and improve operational efficiency.
+              My day-to-day is reusable component architecture, responsive UI from Figma designs with Tailwind CSS and Material UI,
+              state management with Redux Toolkit, and performance work — including migrating SEO-critical pages
+              from CSR to <strong>Server-Side Rendering</strong>, which cut page load time by roughly 20%.
             </p>
             <p className="about-p">
-              Skilled in performance optimization, SSR, API development, and database integration.
-              I'm passionate about turning ideas into reliable, well-crafted products.
+              I also work across the stack when a feature needs it — <strong>Node.js</strong>, <strong>GraphQL</strong>,
+              <strong> PostgreSQL</strong>, and <strong>Prisma</strong> — which is how I designed and shipped
+              <strong> MaintainEase</strong>, a live SaaS platform for housing society management. I use AI tools like
+              Claude Code and Cursor to move faster on development, debugging, and code reviews.
             </p>
 
             <div className="about-stats">

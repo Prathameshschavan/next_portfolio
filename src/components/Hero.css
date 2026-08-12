@@ -127,11 +127,43 @@
   background-clip: text;
 }
 
+.hero-stack {
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  font-weight: 600;
+  color: var(--text2);
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
+}
+
+.stack-dot {
+  color: var(--primary-light);
+  margin: 0 6px;
+}
+
+.hero-focus {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 7px;
+  font-size: 0.92rem;
+  margin-bottom: 22px;
+  min-height: 24px;
+}
+
+.hero-focus-label {
+  color: var(--text3);
+}
+
+.hero-focus-text {
+  color: var(--primary);
+  font-weight: 600;
+}
+
 .hero-desc {
   font-size: 1.05rem;
   color: var(--text3);
   line-height: 1.75;
-  max-width: 500px;
+  max-width: 520px;
   margin-bottom: 36px;
 }
 

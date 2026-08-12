@@ -12,6 +12,8 @@ const categories = [
     title: 'Frontend',
     color: '#6366f1',
     bg: '#eef2ff',
+    featured: true,
+    note: 'Core expertise',
     skills: [
       { name: 'React.js', level: 90 },
       { name: 'Next.js', level: 88 },
@@ -28,6 +30,7 @@ const categories = [
     title: 'Backend',
     color: '#ec4899',
     bg: '#fdf2f8',
+    note: 'Supporting full-stack',
     skills: [
       { name: 'Node.js', level: 85 },
       { name: 'Express.js', level: 83 },
@@ -40,6 +43,7 @@ const categories = [
     title: 'Database',
     color: '#06b6d4',
     bg: '#ecfeff',
+    note: 'Data layer',
     skills: [
       { name: 'PostgreSQL', level: 82 },
       { name: 'MongoDB', level: 78 },
@@ -51,6 +55,7 @@ const categories = [
     title: 'Tools',
     color: '#f59e0b',
     bg: '#fffbeb',
+    note: 'Daily workflow',
     skills: [
       { name: 'Git / GitHub', level: 88 },
       { name: 'Figma', level: 75 },
@@ -61,9 +66,10 @@ const categories = [
   },
   {
     icon: <FiCpu />,
-    title: 'AI Development',
+    title: 'AI-Assisted Development',
     color: '#8b5cf6',
     bg: '#f5f3ff',
+    note: 'Productivity tooling',
     skills: [
       { name: 'Claude Code', level: 90 },
       { name: 'Cursor', level: 85 },
@@ -105,8 +111,8 @@ export default function Skills() {
       <div className="container">
         <div className="section-header">
           <div className="section-tag">Technical Skills</div>
-          <h2 className="section-title">My <span>Tech Stack</span></h2>
-          <p className="section-subtitle">A comprehensive overview of the technologies and tools I work with daily.</p>
+          <h2 className="section-title">Frontend-first <span>Tech Stack</span></h2>
+          <p className="section-subtitle">React.js, Next.js and TypeScript are where I go deepest — with full-stack tooling to support it.</p>
         </div>
 
         <motion.div
@@ -116,11 +122,14 @@ export default function Skills() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          {categories.map(({ icon, title, color, bg, skills }) => (
-            <div className="skill-card" key={title}>
+          {categories.map(({ icon, title, color, bg, skills, featured, note }) => (
+            <div className={`skill-card${featured ? ' skill-card--featured' : ''}`} key={title}>
               <div className="skill-card-header">
                 <span className="skill-cat-icon" style={{ color, background: bg }}>{icon}</span>
-                <h3 className="skill-cat-title">{title}</h3>
+                <div className="skill-cat-heading">
+                  <h3 className="skill-cat-title">{title}</h3>
+                  {note && <span className="skill-cat-note">{note}</span>}
+                </div>
               </div>
               <div className="skill-bars">
                 {skills.map(({ name, level }, i) => (

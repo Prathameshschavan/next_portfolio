@@ -28,7 +28,7 @@ export default function Contact() {
         <div className="section-header">
           <div className="section-tag">Get In Touch</div>
           <h2 className="section-title">Let's <span>Work Together</span></h2>
-          <p className="section-subtitle">Have a project in mind? I'd love to hear about it. Let's create something amazing together.</p>
+          <p className="section-subtitle">Open to Frontend Engineer roles and interesting React.js / Next.js work.</p>
         </div>
 
         <motion.div
@@ -41,7 +41,7 @@ export default function Contact() {
           <div className="contact-info-col">
             <div className="contact-intro">
               <h3>Let's talk!</h3>
-              <p>I'm currently available for freelance work and open to full-time opportunities. If you have a project or opportunity that matches my skills, don't hesitate to reach out.</p>
+              <p>I'm open to full-time Frontend Engineer opportunities where React.js, Next.js, and TypeScript are at the core, and I'm available for freelance work too. If that sounds like a fit, reach out — I'd love to hear about it.</p>
             </div>
 
             <div className="contact-items">

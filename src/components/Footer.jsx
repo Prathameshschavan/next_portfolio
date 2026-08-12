@@ -10,7 +10,7 @@ export default function Footer() {
           <Link to="hero" smooth duration={600} className="footer-logo">
             <span>P</span>rathamesh Chavan
           </Link>
-          <p className="footer-tagline">Full Stack Engineer · Building the web, one commit at a time.</p>
+          <p className="footer-tagline">Frontend Engineer · React.js, Next.js & TypeScript</p>
           <div className="footer-socials">
             <a href="https://github.com/Prathameshschavan" target="_blank" rel="noreferrer" aria-label="GitHub"><FiGithub /></a>
             <a href="https://www.linkedin.com/in/prathamesh-chavan-1886202a5/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FiLinkedin /></a>

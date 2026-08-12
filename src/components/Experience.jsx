@@ -5,18 +5,18 @@ import './Experience.css';
 
 const experiences = [
   {
-    role: 'Full Stack Engineer',
+    role: 'Frontend Engineer',
     company: 'Skysoft IT Services Private Limited',
     location: 'Noida, UP',
     period: 'March 2023 – Present',
     type: 'Full-time',
-    desc: 'Developing production web applications with React.js, Next.js, TypeScript, Node.js, and GraphQL, focusing on performance, SEO, and pixel-perfect UI implementation.',
+    desc: 'Building production web applications with React.js, Next.js, and TypeScript, focused on performance, SEO, and pixel-perfect UI implementation.',
     points: [
-      'Develop production web applications using React.js, Next.js, TypeScript, Node.js, and GraphQL',
-      'Implemented Server-Side Rendering (SSR) for SEO-critical pages, improving search visibility and performance',
+      'Developed production web applications using React.js, Next.js, and TypeScript, with hands-on experience in Node.js and GraphQL',
+      'Implemented Server-Side Rendering (SSR) for SEO-critical pages',
       'Migrated pages from CSR to SSR and reduced page load time by approximately 20%',
       'Built reusable UI components using Tailwind CSS and Material UI from Figma designs',
-      'Used AI development tools to accelerate development, debugging, refactoring, documentation, and code reviews',
+      'Used AI development tools (Claude Code, Cursor, ChatGPT, GitHub Copilot) for development, debugging, refactoring, documentation, and code reviews',
       'Collaborated with cross-functional teams to deliver production-ready features',
     ],
     color: '#6366f1',
@@ -33,7 +33,7 @@ export default function Experience() {
         <div className="section-header">
           <div className="section-tag">Career</div>
           <h2 className="section-title">Work <span>Experience</span></h2>
-          <p className="section-subtitle">My professional journey and the companies I've had the pleasure to work with.</p>
+          <p className="section-subtitle">3+ years of frontend engineering on production web applications.</p>
         </div>
 
         <div className="timeline" ref={ref}>

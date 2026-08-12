@@ -43,8 +43,14 @@ const projects = [
   {
     id: 1,
     title: 'MaintainEase',
-    category: 'fullstack',
-    desc: 'A SaaS platform for housing society management covering maintenance billing, payment tracking, resident management, ledger accounting, and financial reporting. Built with secure role-based dashboards for administrators, accountants, committee members, and residents, on a scalable PostgreSQL schema with automated, audit-friendly accounting workflows. Deployed for live housing society operations.',
+    category: 'SaaS Platform',
+    desc: 'A SaaS platform for housing society management — maintenance billing, payment tracking, resident management, ledger accounting, and financial reporting.',
+    highlights: [
+      'Role-based dashboards for administrators, accountants, committee members, and residents',
+      'Scalable PostgreSQL architecture designed with Prisma ORM',
+      'Automated billing and audit-friendly accounting workflows',
+    ],
+    impact: ['Live in production', 'Designed & built end to end'],
     tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
     live: 'https://maintainease.in',
     confidential: false,
@@ -55,8 +61,14 @@ const projects = [
   {
     id: 2,
     title: 'Enterprise E-Commerce Platform',
-    category: 'fullstack',
-    desc: 'Enterprise-scale e-commerce features built for an international client. Migrated 13+ SEO-critical pages to Server-Side Rendering, improving indexing and application performance, and cut page load time by roughly 20% through frontend optimization and efficient state management with Redux Toolkit.',
+    category: 'Frontend · SSR',
+    desc: 'Enterprise-scale e-commerce features for an international client, built around SEO, rendering performance, and reusable UI.',
+    highlights: [
+      'Migrated 13+ SEO-critical pages from CSR to Server-Side Rendering',
+      'Efficient state management across complex flows with Redux Toolkit',
+      'Reusable responsive components integrated with GraphQL APIs',
+    ],
+    impact: ['13+ pages to SSR', '~20% faster page loads'],
     tags: ['Next.js', 'TypeScript', 'Redux Toolkit', 'GraphQL'],
     live: null,
     confidential: true,
@@ -66,8 +78,10 @@ const projects = [
   {
     id: 3,
     title: 'HRMS Portal',
-    category: 'fullstack',
-    desc: 'A Human Resource Management System built for a mid-size company. Features employee onboarding, attendance tracking, leave management, payroll processing, and performance review modules.',
+    category: 'Frontend',
+    desc: 'A Human Resource Management System for a mid-size company, covering employee onboarding, attendance, leave management, payroll processing, and performance reviews.',
+    highlights: [],
+    impact: [],
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Redux Toolkit'],
     live: null,
     confidential: true,
@@ -86,7 +100,7 @@ export default function Projects() {
         <div className="section-header">
           <div className="section-tag">My Work</div>
           <h2 className="section-title">Featured <span>Projects</span></h2>
-          <p className="section-subtitle">Projects I've built, personally and professionally.</p>
+          <p className="section-subtitle">Production work and products I've shipped — the problem, my contribution, and the impact.</p>
         </div>
 
         <motion.div
@@ -123,6 +137,18 @@ export default function Projects() {
                   <span className="project-cat">{p.category}</span>
                   <h3 className="project-title">{p.title}</h3>
                   <p className="project-desc">{p.desc}</p>
+                  {p.highlights?.length > 0 && (
+                    <ul className="project-highlights">
+                      {p.highlights.map(h => (
+                        <li key={h}><span className="proj-bullet" />{h}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {p.impact?.length > 0 && (
+                    <div className="project-impact">
+                      {p.impact.map(i => <span key={i} className="impact-chip">{i}</span>)}
+                    </div>
+                  )}
                   <div className="project-tags">
                     {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
                   </div>

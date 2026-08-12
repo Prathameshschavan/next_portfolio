@@ -27,30 +27,39 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <span className="badge-dot" />
-            Available for work
+            Open to Frontend Engineer roles
           </motion.div>
 
           <h1 className="hero-title">
             Hi, I'm <span className="gradient-text">Prathamesh</span>
             <br />
+            <span className="typed-text">Frontend Engineer</span>
+          </h1>
+
+          <p className="hero-stack">
+            React.js <span className="stack-dot">•</span> Next.js <span className="stack-dot">•</span> TypeScript
+          </p>
+
+          <p className="hero-focus">
+            <span className="hero-focus-label">Focused on</span>
             <TypeAnimation
               sequence={[
-                'Full Stack Engineer', 2000,
-                'React & Next.js Developer', 2000,
-                'Node.js Engineer', 2000,
-                'AI-Assisted Developer', 2000,
+                'Server-Side Rendering & SEO', 2000,
+                'Frontend performance optimization', 2000,
+                'Reusable component architecture', 2000,
+                'Responsive, type-safe React UIs', 2000,
               ]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
-              className="typed-text"
+              className="hero-focus-text"
             />
-          </h1>
+          </p>
 
           <p className="hero-desc">
-            Full Stack Engineer with 3+ years of experience building scalable web applications
-            using React.js, Next.js, TypeScript, Node.js, Prisma, and PostgreSQL. I build SaaS
-            products, SEO-focused solutions, and fast, reliable user experiences.
+            Frontend Engineer with 3+ years of experience building scalable, performant,
+            SEO-friendly production web applications with React.js, Next.js, and TypeScript —
+            backed by hands-on full-stack experience across Node.js, GraphQL, PostgreSQL, and Prisma.
           </p>
 
           <div className="hero-actions">
@@ -108,10 +117,10 @@ export default function Hero() {
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
           >
-            <span className="card-icon">💼</span>
+            <span className="card-icon">⚡</span>
             <div>
-              <p className="card-val">3+</p>
-              <p className="card-lab">Projects Done</p>
+              <p className="card-val">~20%</p>
+              <p className="card-lab">Faster Page Loads</p>
             </div>
           </motion.div>
         </motion.div>
