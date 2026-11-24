@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+/* ---------- Design tokens ----------
+   One neutral scale + a single accent. Dark is the default; the inline
+   script in layout.tsx swaps data-theme before first paint. */
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0b0b0c;
+  --surface: #121214;
+  --surface-2: #19191c;
+  --border: #242428;
+  --border-strong: #34343a;
+  --fg: #ededef;
+  --muted: #a1a1aa;
+  --subtle: #85858f;
+  --accent: #bef264;
+  --accent-soft: rgb(190 242 100 / 0.12);
+  --accent-ink: #0b0b0c;
+  --success: #4ade80;
+  --grid: rgb(255 255 255 / 0.035);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --surface-2: #f4f4f5;
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --fg: #18181b;
+  --muted: #52525b;
+  --subtle: #66666f;
+  --accent: #4d7c0f;
+  --accent-soft: rgb(77 124 15 / 0.1);
+  --accent-ink: #ffffff;
+  --success: #16a34a;
+  --grid: rgb(0 0 0 / 0.04);
+}
+
+/* Short viewports (e.g. 1280x720 laptops): the sticky sidebar compacts itself */
+@custom-variant short (@media (max-height: 960px));
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-success: var(--success);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+/* ---------- Base ----------
+   Inside @layer base so Tailwind utilities (e.g. focus-visible:outline-none)
+   can override these defaults. Unlayered CSS would beat every utility. */
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  /* Faint engineering-paper grid, fading out down the page */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 80% 60% at 30% 0%, #000 30%, transparent 75%);
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  @media (min-width: 1024px) {
+    section[id] {
+      scroll-margin-top: 6rem;
+    }
+  }
+}
+
+/* Theme swap shouldn't animate every surface */
+[data-theme-switching] * {
+  transition: none !important;
+}
+
+/* ---------- Motion (opt-in only) ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .enter {
+    animation: enter 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+
+  /* Movement only, never opacity: content stays at full contrast while it scrolls in. */
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+
+  .pulse::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    animation: pulse 2.4s ease-out infinite;
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes rise {
+  from {
+    translate: 0 24px;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70%,
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* ---------- Command menu dialog ---------- */
+
+dialog.command-menu {
+  margin: 12vh auto auto;
+  max-width: min(36rem, calc(100vw - 2rem));
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+dialog.command-menu::backdrop {
+  background: rgb(0 0 0 / 0.55);
+  backdrop-filter: blur(4px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  dialog.command-menu[open] > div {
+    animation: pop 0.16s ease-out;
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+}
