@@ -120,7 +120,7 @@ export default function Home() {
                 {experience.map((job) => (
                   <li key={job.company} className="reveal grid gap-3 sm:grid-cols-[9rem_1fr] sm:gap-8">
                     <p className="font-mono text-[12px] text-subtle tabular-nums sm:pt-1">
-                      <time>{job.start}</time> — <time>{job.end}</time>
+                      <time>{job.start}</time> – <time>{job.end}</time>
                     </p>
                     <div>
                       <h3 className="font-semibold tracking-tight text-fg">
@@ -164,7 +164,7 @@ export default function Home() {
                 {education.map((e) => (
                   <li key={e.title} className="grid gap-1 py-5 first:pt-0 last:pb-0 sm:grid-cols-[9rem_1fr] sm:gap-8">
                     <p className="font-mono text-[12px] text-subtle tabular-nums sm:pt-1">
-                      <time>{e.start}</time> — <time>{e.end}</time>
+                      <time>{e.start}</time> – <time>{e.end}</time>
                     </p>
                     <div>
                       <h3 className="font-medium text-fg">{e.title}</h3>

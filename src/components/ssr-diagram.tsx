@@ -4,7 +4,7 @@ type Row = { label: string; steps: Step[]; visibleAt: number; note: string };
 // Schematic only: segment widths show order and relative cost, not measurements.
 const rows: Row[] = [
   {
-    label: "Before — client-side rendering",
+    label: "Before: client-side rendering",
     steps: [
       { label: "HTML", width: 9 },
       { label: "JS download", width: 27 },
@@ -16,7 +16,7 @@ const rows: Row[] = [
     note: "Content appears at the very end",
   },
   {
-    label: "After — server-side rendering",
+    label: "After: server-side rendering",
     steps: [
       { label: "Fetch + render on server", width: 34 },
       { label: "HTML", width: 11, accent: true },

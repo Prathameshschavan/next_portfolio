@@ -1,4 +1,4 @@
-# Prathamesh Chavan — Portfolio
+# Prathamesh Chavan | Portfolio
 
 Personal portfolio of a frontend engineer, built with **Next.js 16 (App Router)**, **TypeScript** and **Tailwind CSS v4**. Every route is statically prerendered.
 
@@ -25,11 +25,11 @@ npm run typecheck
 
 All copy lives in [`src/content/profile.ts`](src/content/profile.ts): profile, metrics, about text, case studies, experience, skills and education. You don't need to touch any layout code to update the site.
 
-To replace the résumé, swap `public/prathamesh_chavan_resume.pdf`. To replace the portrait, swap `src/assets/portrait.jpg`.
+To replace the résumé, swap `public/prathamesh_chavan_resume.pdf` (keep the filename so the download link keeps working). To replace the portrait, swap `src/assets/portrait.jpg`.
 
 ## Deploying
 
-The site deploys to Vercel with no configuration. Set `NEXT_PUBLIC_SITE_URL` to the production URL (for example `https://yourdomain.com`) so canonical URLs, the sitemap and Open Graph links are absolute. On Vercel it falls back to the project's production domain automatically.
+The site deploys to Vercel with no configuration. Set `NEXT_PUBLIC_SITE_URL` to the production URL (for example `https://yourdomain.com`) so canonical URLs, the sitemap and Open Graph links are absolute. Without it, the site falls back to Vercel's production domain, then to `https://prathameshchavan.vercel.app`.
 
 ## Project structure
 

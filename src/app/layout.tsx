@@ -7,9 +7,9 @@ import "./globals.css";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-const title = `${profile.name} — Frontend Engineer (React, Next.js, TypeScript)`;
+const title = `${profile.name} | Frontend Engineer (React, Next.js, TypeScript)`;
 const description =
-  "Frontend Engineer with 3+ years building fast, SEO-friendly production web apps with React, Next.js and TypeScript — plus full-stack work in Node.js, GraphQL, PostgreSQL and Prisma.";
+  "Frontend Engineer with 3+ years building fast, SEO-friendly production web apps with React, Next.js and TypeScript, plus full-stack work in Node.js, GraphQL, PostgreSQL and Prisma.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
